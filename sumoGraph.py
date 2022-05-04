@@ -120,7 +120,7 @@ class SumoGraph(AdjacencyGraph):
         os.system(" ".join(netcmd))
 
     def gen_rand_trips(self, net_file, loc, end_time):
-        randroute = ["python", "c:/\"Program Files (x86)\"/Eclipse/Sumo/tools/randomTrips.py",
+        randroute = ["python", "$SUMO_HOME/tools/randomTrips.py",
                      "-n", net_file, "-r", loc, "-e", str(end_time)]
         os.system(" ".join(randroute))
 
